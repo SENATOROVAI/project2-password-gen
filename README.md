@@ -1,1 +1,6 @@
-# project2-password-gen
+- app
+  - __init__.py
+  - views.py
+- templates
+  - index.html
+- app.py
