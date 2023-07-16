@@ -4,3 +4,5 @@
 - templates
   - index.html
 - app.py
+
+  ВНЕСИТЕ ПРАВКИ СЮДА
