@@ -13,4 +13,6 @@ def generate_password():
     return render_template('index.html', password=password)
 
 
+#файл зависимостей перенеси в корень
+
 
