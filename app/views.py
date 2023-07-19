@@ -1,15 +1,16 @@
-из фласка импорт render_template, request
+from flask import render_template, request
+from controllers import generate_random_password
+from app import app
 
-импорт объекта фласк
-импортируем контроллер функцию
-
-@объект_фласк.роутер('/')
+@app.route('/')
 def home():
-    return render_template('привет я шаблон хтмл')
+    return render_template('index.html')
 
-@объект_фласк.роутер('/generate', метод=['ПОСТ'])
-я_функция generate_password():
-    length =  инт(request.форм по ключу length)
-    password = функция которая возвращает пароль(length)
-    верни render_template('привет я шаблон хтмл', передать переменную в шаблон пассворд)
+@app.route('/generate', method=['POST'])
+def generate_password():
+    length =  int(request.form['lenght'])
+    password = generate_random_password(length)
+    return render_template('index.html', password=password)
+
+
 
