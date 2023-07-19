@@ -3,7 +3,7 @@ from app import app
 from .controllers.controller import generate_random_password
 
 
-@app.route("/", methods=["GET"])
+@app.route("/")
 def home():
     return render_template("index.html")
 
