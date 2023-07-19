@@ -1,16 +1,15 @@
 from flask import render_template, request
-from controllers import generate_random_password
 from app import app
+from .controllers.controller import generate_random_password
 
-@app.route('/')
+
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route('/generate', method=['POST'])
+
+@app.route("/generate", methods=["POST"])
 def generate_password():
-    length =  int(request.form['lenght'])
+    length = int(request.form["length"])
     password = generate_random_password(length)
-    return render_template('index.html', password=password)
-
-
-
+    return render_template("index.html", password=password)
