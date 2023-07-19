@@ -1,7 +1,7 @@
-импорт рандом
-импорт стринг
+import random
+import string
 
-я_функция generate_random_password(я_принимаю_длинну):
-    characters = я объект стринг.ascii_letters + я объект стринг.digits + я объект стринг.punctuation
-    password = ''.сплит(рандом.метод выбора рандома(characters) фор _ в диапазоне(я_принимаю_длинну))
-    верни пароль
+def generate_random_password(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
