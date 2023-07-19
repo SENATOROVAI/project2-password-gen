@@ -1,5 +1,5 @@
-импорт фласк
+from flask import Flask
 
-app =  объект фласк
+app = Flask(__name__)
 
-импорт вьюха
+from app import views 
