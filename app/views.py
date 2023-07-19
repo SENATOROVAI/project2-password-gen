@@ -1,6 +1,6 @@
 from flask import render_template, request
 from controllers import generate_random_password
-здесь нужно отимпортить экземпляр класса 
+import app
 
 @app.route('/')
 def home():
@@ -12,7 +12,5 @@ def generate_password():
     password = generate_random_password(length)
     return render_template('index.html', password=password)
 
-
-#файл зависимостей перенеси в корень
 
 
