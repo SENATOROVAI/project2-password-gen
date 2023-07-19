@@ -1,6 +1,6 @@
 from flask import render_template, request
 from controllers import generate_random_password
-import app
+from app import app
 
 @app.route('/')
 def home():
