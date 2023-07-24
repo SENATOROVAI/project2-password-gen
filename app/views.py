@@ -7,7 +7,7 @@ from .controllers.controller import generate_random_password
 def home():
     return render_template("index.html")
 
-
+# Нужна помощь в реализации редиректа в функции
 @app.route("/generate", methods=["POST"])
 def generate_password():
     length = int(request.form["length"])
