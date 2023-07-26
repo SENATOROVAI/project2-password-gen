@@ -1,4 +1,6 @@
 - app
+  - controllers
+      - controller.py
   - __init__.py
   - views.py
 - templates
